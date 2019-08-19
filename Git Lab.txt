@@ -1,0 +1,12 @@
+Thapa technical youtube 
+1.) git init
+2.) set name and email => git config --global user.name pallavi / git config --global user.email pall@gmail.com => TO see user and email => git config --global user.name 
+3.) to make directory in d drive => cd d: => mkdir pallaviGit 
+4.) now to make files under directory pallaviGit => after opening d drive by cd d: => cd pallaviGit => touch wordcount.scala => touch index.html
+notepad index.html => write something and save
+5.) git status => it will give details of all untracked files (files that have not been commited to git yet)
+6.) Move to staging area ie move untracked files by git add command => git add wordcount.scala / or to move all files in that dir => git add -A / git add .
+Now if we modify our file index.html again it is modified in workind directory not in staging area so we have to again add it to staging area first before commiting.
+check status again => git status
+7.) To commit files in staging area => git commit -m '1st commit'
+8.) To chk if the file is commited => git log / git log --oneline (for concise)
