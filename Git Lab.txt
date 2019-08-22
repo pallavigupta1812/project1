@@ -1,12 +1,27 @@
+To start Git => cd d: > open the directory => cd pallaviGit 
 Thapa technical youtube 
 1.) git init
 2.) set name and email => git config --global user.name pallavi / git config --global user.email pall@gmail.com => TO see user and email => git config --global user.name 
 3.) to make directory in d drive => cd d: => mkdir pallaviGit 
 4.) now to make files under directory pallaviGit => after opening d drive by cd d: => cd pallaviGit => touch wordcount.scala => touch index.html
 notepad index.html => write something and save
+And To see the content of file => cat index.html
 5.) git status => it will give details of all untracked files (files that have not been commited to git yet)
 6.) Move to staging area ie move untracked files by git add command => git add wordcount.scala / or to move all files in that dir => git add -A / git add .
 Now if we modify our file index.html again it is modified in workind directory not in staging area so we have to again add it to staging area first before commiting.
 check status again => git status
 7.) To commit files in staging area => git commit -m '1st commit'
 8.) To chk if the file is commited => git log / git log --oneline (for concise)
+***Untracked files (RED color)
+***Staging area files (GREEN color) ready to be commited
+................................................................................
+Initializing git to save our files on git repo
+1.) cd d:
+2.) cd pallaviGit
+3.) git remote add origin https://github.com/pallavigupta1812/project1.git        (origin is an allias to this link )
+4.) To check if connected => git remote & git remote -v 
+5.)  git push -u origin master / This will fail then =>  git push -u origin master --force
+6.) Now check in github if repo gets projects
+7.) notepad index.html   (If we have changed the file then again we have to chk status => then add it in staging area => then commit => then push )
+8.) 
+
