@@ -23,5 +23,10 @@ Initializing git to save our files on git repo
 5.)  git push -u origin master / This will fail then =>  git push -u origin master --force
 6.) Now check in github if repo gets projects
 7.) notepad index.html   (If we have changed the file then again we have to chk status => then add it in staging area => then commit => then push )
-8.) 
-
+8.) git status 
+9.) git add .
+10.) git commit -m 'new line added'
+11.) git log --onleine
+12.) git push -u origin master --force 
+..........................................
+From now git add >> commit >> push (thats it )
