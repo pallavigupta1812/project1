@@ -1,0 +1,27 @@
+package com.ibm.demo
+
+import org.apache.spark._
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkContext._
+import org.apache.spark.SparkConf
+import org.apache.spark.sql._
+import org.apache.spark.sql.SQLContext
+import com.databricks.spark.csv
+
+object sample_json {
+  def main(args: Array[String]): Unit = {
+    val inputfile = "d:\\student_record.csv";
+    //create scala spark context
+    val conf = new SparkConf().setAppName("SOME APP NAME").setMaster("local")
+    val sc = new SparkContext(conf)
+    val sqlContext= new org.apache.spark.sql.SQLContext(sc)
+      import sqlContext.implicits._
+    
+    //setting hadoop bin directory
+    System.setProperty("hadoop.home.dir", "d:/bin");
+ val myDF = sqlContext.read.format("com.databricks.spark.csv").load(inputfile)
+    myDF.registerTempTable("example")
+    myDF.printSchema()
+    myDF.show()
+  }
+}

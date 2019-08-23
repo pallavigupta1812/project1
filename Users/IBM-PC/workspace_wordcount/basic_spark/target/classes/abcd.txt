@@ -1,0 +1,1 @@
+Cloudera Manager and goto Hosts page then run
